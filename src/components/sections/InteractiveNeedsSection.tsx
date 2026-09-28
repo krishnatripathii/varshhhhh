@@ -28,7 +28,7 @@ export const InteractiveNeedsSection = () => {
   }, [reducedMotion]);
 
   return (
-    <section className="py-24 md:py-32 bg-paper-bg relative overflow-hidden">
+    <section className="py-24 md:py-32 bg-board-green relative overflow-hidden">
       {/* Subtle geometric background */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <div
@@ -43,11 +43,11 @@ export const InteractiveNeedsSection = () => {
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <AnimatedSection className="mb-16">
-          <p className="text-xs tracking-[0.3em] uppercase text-pencil-dark font-bold/70 mb-4 font-bold flex items-center gap-3">
+          <p className="text-xs tracking-[0.3em] uppercase text-white font-bold/70 mb-4 font-bold flex items-center gap-3">
             <span className="w-6 h-px bg-marker-yellow/40" />
             AI CAPABILITIES
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight text-pencil-dark">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight text-white">
             LIVE AI ANALYTICS
           </h2>
         </AnimatedSection>
@@ -56,14 +56,14 @@ export const InteractiveNeedsSection = () => {
           {/* Detection Feed */}
           <div className="lg:col-span-7">
             <AnimatedSection delay={100}>
-              <div className="bg-paper-dark border border-pencil-medium/20 rounded-xl overflow-hidden">
+              <div className="bg-board-slate border border-white/10 rounded-xl overflow-hidden">
                 {/* Header */}
-                <div className="px-6 py-4 border-b border-pencil-medium/20 flex items-center justify-between">
+                <div className="px-6 py-4 border-b border-white/10 flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-marker-yellow animate-pulse-dot" />
-                    <span className="text-xs tracking-[0.2em] uppercase text-pencil-medium font-bold">Detection Feed</span>
+                    <span className="text-xs tracking-[0.2em] uppercase text-white/70 font-bold">Detection Feed</span>
                   </div>
-                  <span className="text-xs text-pencil-medium/50 font-mono">LIVE</span>
+                  <span className="text-xs text-white/70/50 font-mono">LIVE</span>
                 </div>
 
                 {/* Detection list */}
@@ -80,21 +80,21 @@ export const InteractiveNeedsSection = () => {
                           activeDetection === i ? 'bg-marker-yellow' : 'bg-pencil-light/20'
                         }`} />
                         <div>
-                          <p className="text-sm font-bold text-pencil-dark">
+                          <p className="text-sm font-bold text-white">
                             {det.type} DETECTED
                           </p>
-                          <p className="text-xs text-pencil-medium/60">{det.zone}</p>
+                          <p className="text-xs text-white/70/60">{det.zone}</p>
                         </div>
                       </div>
                       <div className="flex items-center gap-4">
                         <span className={`text-xs font-mono px-2 py-1 rounded ${
                           det.status === 'tracking'
-                            ? 'bg-marker-yellow/10 text-pencil-dark font-bold'
-                            : 'bg-pencil-light/10 text-pencil-medium/60'
+                            ? 'bg-marker-yellow/10 text-white font-bold'
+                            : 'bg-pencil-light/10 text-white/70/60'
                         }`}>
                           {det.status.toUpperCase()}
                         </span>
-                        <span className="text-xs font-mono text-pencil-medium/40">
+                        <span className="text-xs font-mono text-white/70/40">
                           {det.confidence}%
                         </span>
                       </div>
@@ -112,13 +112,13 @@ export const InteractiveNeedsSection = () => {
                 {metrics.map((metric) => (
                   <div
                     key={metric.label}
-                    className="bg-paper-dark border border-pencil-medium/20 rounded-xl p-6 flex items-center justify-between"
+                    className="bg-board-slate border border-white/10 rounded-xl p-6 flex items-center justify-between"
                   >
                     <div>
-                      <p className="text-xs tracking-[0.15em] uppercase text-pencil-medium/50 mb-1 font-bold">
+                      <p className="text-xs tracking-[0.15em] uppercase text-white/70/50 mb-1 font-bold">
                         {metric.label}
                       </p>
-                      <p className="text-2xl font-display font-bold text-pencil-dark">
+                      <p className="text-2xl font-display font-bold text-white">
                         {metric.value}
                       </p>
                     </div>
@@ -131,12 +131,12 @@ export const InteractiveNeedsSection = () => {
                 ))}
 
                 {/* Alert panel */}
-                <div className="bg-paper-dark border border-pencil-medium/20 rounded-xl p-6">
+                <div className="bg-board-slate border border-white/10 rounded-xl p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-2 h-2 rounded-full bg-green-500/60" />
-                    <span className="text-xs tracking-[0.15em] uppercase text-pencil-medium/50 font-bold">SYSTEM STATUS</span>
+                    <span className="text-xs tracking-[0.15em] uppercase text-white/70/50 font-bold">SYSTEM STATUS</span>
                   </div>
-                  <p className="text-sm text-pencil-medium leading-relaxed">
+                  <p className="text-sm text-white/70 leading-relaxed">
                     All detection systems operational. No active alerts.
                   </p>
                 </div>

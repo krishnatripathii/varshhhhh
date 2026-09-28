@@ -10,23 +10,23 @@
   }
   
   body {
-    @apply bg-paper-bg text-pencil-dark font-sans;
-    background-color: theme('colors.paper-bg');
-    background-image: radial-gradient(theme('colors.pencil-medium') 1px, transparent 1px);
+    @apply bg-board-green text-white font-sans;
+    background-color: theme('colors.board-green');
+    background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
     background-size: 24px 24px;
     background-position: 0 0;
     opacity: 0.95;
   }
 
   ::selection {
-    @apply bg-marker-yellow text-pencil-dark;
+    @apply bg-marker-yellow text-white;
   }
 
   ::-webkit-scrollbar {
     width: 6px;
   }
   ::-webkit-scrollbar-track {
-    @apply bg-paper-bg;
+    @apply bg-board-green;
   }
   ::-webkit-scrollbar-thumb {
     @apply bg-pencil-light rounded-full;
@@ -61,11 +61,11 @@
     @apply bg-marker-blue;
   }
   .sketch-border {
-    border: 2px solid theme('colors.pencil-dark');
+    border: 2px solid theme('colors.white');
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
   }
   .sketch-border-subtle {
-    border: 1px solid theme('colors.pencil-medium');
+    border: 1px solid rgba(255,255,255,0.05);
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
   }
 }
@@ -84,5 +84,5 @@
 }
 
 :focus-visible {
-  @apply outline-none ring-2 ring-pencil-dark ring-offset-2 ring-offset-paper-bg;
+  @apply outline-none ring-2 ring-pencil-dark ring-offset-2 ring-offset-board-green;
 }

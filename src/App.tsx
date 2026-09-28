@@ -18,7 +18,7 @@ import { ErrorBoundary } from './ErrorBoundary';
 function App() {
   return (
     <ErrorBoundary>
-      <div className="relative w-full text-pencil-dark bg-paper-bg">
+      <div className="relative w-full text-white bg-board-green">
         <Navbar />
 
         <main className="relative w-full z-0 flex flex-col">

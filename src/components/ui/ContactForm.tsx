@@ -40,8 +40,8 @@ export const ContactForm = () => {
   };
 
   const inputClasses =
-    'w-full bg-paper-dark/80 border border-pencil-medium/30 rounded-lg px-4 py-3.5 text-pencil-dark text-base placeholder:text-pencil-medium/40 focus:outline-none focus:border-pencil-dark focus:ring-1 focus:ring-pencil-dark/30 transition-all font-medium hover:border-pencil-medium';
-  const labelClasses = 'block text-xs tracking-[0.15em] uppercase font-bold text-pencil-medium/60 mb-2';
+    'w-full bg-board-slate/80 border border-white/20 rounded-lg px-4 py-3.5 text-white text-base placeholder:text-white/70/40 focus:outline-none focus:border-pencil-dark focus:ring-1 focus:ring-pencil-dark/30 transition-all font-medium hover:border-pencil-medium';
+  const labelClasses = 'block text-xs tracking-[0.15em] uppercase font-bold text-white/70/60 mb-2';
 
   if (status === 'success') {
     return (
@@ -49,11 +49,11 @@ export const ContactForm = () => {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.4 }}
-        className="flex flex-col items-center justify-center text-center p-12 bg-paper-dark border border-pencil-medium/30 rounded-2xl"
+        className="flex flex-col items-center justify-center text-center p-12 bg-board-slate border border-white/20 rounded-2xl"
       >
-        <CheckCircle className="w-12 h-12 text-pencil-dark font-bold mb-6" strokeWidth={2} />
-        <h3 className="text-2xl font-display font-bold mb-2 text-pencil-dark">Message received.</h3>
-        <p className="text-base text-pencil-medium font-medium">We'll get back to you shortly to start the conversation.</p>
+        <CheckCircle className="w-12 h-12 text-white font-bold mb-6" strokeWidth={2} />
+        <h3 className="text-2xl font-display font-bold mb-2 text-white">Message received.</h3>
+        <p className="text-base text-white/70 font-medium">We'll get back to you shortly to start the conversation.</p>
       </motion.div>
     );
   }
@@ -147,7 +147,7 @@ export const ContactForm = () => {
         <button
           type="submit"
           disabled={status === 'submitting'}
-          className="bg-marker-yellow text-pencil-dark font-bold px-8 py-4 rounded-lg hover:bg-marker-yellow/90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed w-full mt-2 flex items-center justify-center gap-2 group text-sm tracking-wide"
+          className="bg-marker-yellow text-white font-bold px-8 py-4 rounded-lg hover:bg-marker-yellow/90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed w-full mt-2 flex items-center justify-center gap-2 group text-sm tracking-wide"
         >
           {status === 'submitting' ? 'Sending...' : 'START A CONVERSATION'}
           {status !== 'submitting' && <span className="group-hover:translate-x-1 transition-transform">→</span>}

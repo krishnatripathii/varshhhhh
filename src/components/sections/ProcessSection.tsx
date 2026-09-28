@@ -6,22 +6,22 @@ import { SpiderWebDoodle, RobotDoodle } from '../ui/Doodles';
 
 export const ProcessSection = () => {
   return (
-    <section id="process" className="py-24 md:py-32 bg-pastel-blue relative overflow-hidden">
+    <section id="process" className="py-24 md:py-32 bg-board-slate relative overflow-hidden">
       {/* Subtle accent */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[200px] bg-marker-yellow/20 rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="absolute top-[30%] left-[3%] w-24 h-24 text-pencil-light/10 -rotate-12 pointer-events-none hidden md:block">
+      <div className="absolute top-[30%] left-[3%] w-24 h-24 text-white/40/10 -rotate-12 pointer-events-none hidden md:block">
         <RobotDoodle />
       </div>
-      <div className="absolute bottom-[20%] right-[3%] w-32 h-32 text-pencil-light/10 rotate-12 pointer-events-none hidden md:block">
+      <div className="absolute bottom-[20%] right-[3%] w-32 h-32 text-chalk-pink/30/10 rotate-12 pointer-events-none hidden md:block">
         <SpiderWebDoodle />
       </div>
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <AnimatedSection className="mb-16 md:mb-20 text-center max-w-3xl mx-auto">
-          <p className="text-xs tracking-[0.3em] uppercase text-pencil-dark font-bold/70 mb-4 font-bold">
+          <p className="text-xs tracking-[0.3em] uppercase text-white font-bold/70 mb-4 font-bold">
             HOW WE WORK
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight text-pencil-dark">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight text-white">
             Our Process
           </h2>
         </AnimatedSection>
@@ -43,7 +43,7 @@ export const ProcessSection = () => {
 
                   {/* Dot */}
                   <div
-                    className={`w-3 h-3 rounded-full mb-6 transition-colors duration-300 relative z-10 ring-4 ring-paper-bg ${
+                    className={`w-3 h-3 rounded-full mb-6 transition-colors duration-300 relative z-10 ring-4 ring-board-green ${
                       index < 3
                         ? 'bg-marker-yellow'
                         : 'bg-pencil-medium/20 group-hover:bg-marker-yellow'
@@ -53,16 +53,16 @@ export const ProcessSection = () => {
                   <span
                     className={`text-xs font-bold block mb-2 transition-colors font-mono ${
                       index < 3
-                        ? 'text-pencil-dark font-bold'
-                        : 'text-pencil-medium/40 group-hover:text-pencil-dark font-bold'
+                        ? 'text-white font-bold'
+                        : 'text-white/70/40 group-hover:text-white font-bold'
                     }`}
                   >
                     {step.num}
                   </span>
-                  <h3 className="text-lg font-bold mb-2 text-pencil-dark tracking-tight">
+                  <h3 className="text-lg font-bold mb-2 text-white tracking-tight">
                     {step.title.toUpperCase()}
                   </h3>
-                  <p className="text-sm text-pencil-medium/60 leading-relaxed">
+                  <p className="text-sm text-white/70/60 leading-relaxed">
                     {step.desc}
                   </p>
                 </div>
