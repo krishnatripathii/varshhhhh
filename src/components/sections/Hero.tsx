@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { HeroGeometry } from '../ui/HeroGeometry';
-import { SpiderWebDoodle, RobotDoodle, SpidermanMaskDoodle, NotebookSquiggle, ArrowDoodle, AIDoodle } from '../ui/Doodles';
+import { PineappleDoodle, SpiderWebDoodle, RobotDoodle, SpidermanMaskDoodle, NotebookSquiggle, ArrowDoodle, AIDoodle } from '../ui/Doodles';
 
 
 export const Hero = () => {
@@ -12,10 +12,14 @@ export const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen w-full flex items-center pt-28 pb-20 overflow-hidden bg-paper-bg">
+    <section id="hero" className="relative min-h-screen w-full flex items-center pt-28 pb-20 overflow-hidden bg-pastel-yellow">
       <HeroGeometry />
       
-      <div className="absolute top-[10%] right-[5%] w-64 h-64 text-pencil-light/20 rotate-12 animate-float-slow pointer-events-none hidden lg:block">
+      
+      <div className="absolute top-[15%] left-[20%] w-24 h-24 text-marker-yellow/80 rotate-12 pointer-events-none hidden lg:block">
+        <PineappleDoodle />
+      </div>
+<div className="absolute top-[10%] right-[5%] w-64 h-64 text-pencil-light/20 rotate-12 animate-float-slow pointer-events-none hidden lg:block">
         <SpiderWebDoodle />
       </div>
       <div className="absolute top-[35%] right-[20%] w-32 h-32 text-red-500/20 -rotate-12 animate-float-delayed pointer-events-none hidden lg:block">
@@ -42,7 +46,7 @@ export const Hero = () => {
             transition={{ duration: 0.6, ease: 'easeOut' }}
             className="text-xs tracking-[0.3em] uppercase text-pencil-dark font-bold/80 mb-8 font-bold flex items-center gap-3"
           >
-            <span className="w-6 h-px bg-marker-yellow/40" />
+            <span className="w-6 h-px bg-marker-yellow" />
             SMART TOOLS • AUTOMATION • DESIGN
           </motion.p>
 

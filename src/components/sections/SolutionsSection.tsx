@@ -14,7 +14,7 @@ const solutions = [
 
 export const SolutionsSection = () => {
   return (
-    <section id="solutions" className="py-24 md:py-32 bg-paper-dark relative overflow-hidden">
+    <section id="solutions" className="py-24 md:py-32 bg-pastel-lilac relative overflow-hidden">
       <div className="absolute top-[40%] right-[3%] w-24 h-24 text-pencil-light/20 rotate-12 pointer-events-none hidden lg:block">
         <AIDoodle />
       </div>

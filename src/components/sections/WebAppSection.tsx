@@ -12,12 +12,12 @@ const technologies = [
 
 export const WebAppSection = () => {
   return (
-    <section className="py-24 md:py-32 bg-paper-dark relative overflow-hidden">
+    <section className="py-24 md:py-32 bg-pastel-sage relative overflow-hidden">
       <div className="absolute top-[20%] right-[10%] w-24 h-24 text-pencil-light/10 -rotate-12 pointer-events-none hidden md:block">
         <SpidermanMaskDoodle />
       </div>
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-        <Paperclip className="top-10 right-20 w-12 h-12 rotate-[30deg]" />
+        <Paperclip className="top-[-25px] right-32 w-14 h-14 rotate-[20deg] text-pencil-medium/60" />
         <AnimatedSection className="mb-16">
           <p className="text-xs tracking-[0.3em] uppercase text-pencil-dark font-bold/70 mb-4 font-bold flex items-center gap-3">
             <span className="w-6 h-px bg-marker-yellow/40" />

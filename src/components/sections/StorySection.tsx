@@ -4,9 +4,9 @@ import { AnimatedSection } from '../ui/AnimatedSection';
 
 export const StorySection = () => {
   return (
-    <section id="about" className="py-32 md:py-44 bg-paper-surface relative overflow-hidden">
+    <section id="about" className="py-32 md:py-44 bg-pastel-yellow relative overflow-hidden">
       {/* Subtle geometric accent */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-marker-yellow/[0.02] rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-marker-yellow/20 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute right-0 top-1/3 w-[200px] h-[200px] bg-ai-ivory/[0.01] rounded-full blur-[100px] pointer-events-none" />
 
       <div className="absolute top-[5%] right-[5%] w-32 h-32 text-pencil-light/20 rotate-45 pointer-events-none hidden md:block">

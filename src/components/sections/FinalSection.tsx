@@ -3,14 +3,14 @@ import { ContactForm } from '../ui/ContactForm';
 import { AnimatedSection } from '../ui/AnimatedSection';
 import { GeometricBackground } from '../ui/GeometricBackground';
 import { SpiderWebDoodle, NotebookSquiggle, RobotDoodle } from '../ui/Doodles';
-import { Tape, Staple } from '../ui/Stationery';
+import { Staple } from '../ui/Stationery';
 
 
 export const FinalSection = () => {
   return (
     <section id="contact" className="relative overflow-hidden">
       {/* CTA Block */}
-      <div className="py-24 md:py-32 bg-paper-bg relative">
+      <div className="py-24 md:py-32 bg-pastel-yellow relative">
         <GeometricBackground variant="dense" />
 
         <div className="absolute top-[10%] left-[10%] w-48 h-48 text-pencil-light/10 -rotate-12 pointer-events-none hidden md:block">
@@ -20,8 +20,7 @@ export const FinalSection = () => {
         <RobotDoodle />
       </div>
       <div className="max-w-5xl mx-auto px-6 md:px-12 text-center relative z-10">
-        <Tape className="top-10 left-1/2 -translate-x-1/2 rotate-3" />
-          <AnimatedSection>
+        <AnimatedSection>
             <p className="text-xs tracking-[0.3em] uppercase text-pencil-dark font-bold/70 mb-6 font-bold">
               READY?
             </p>
@@ -49,7 +48,7 @@ export const FinalSection = () => {
       </div>
 
       {/* Contact Form Block */}
-      <div id="contact-form" className="py-24 md:py-32 bg-paper-surface">
+      <div id="contact-form" className="py-24 md:py-32 bg-pastel-sage">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12">
             {/* Left */}
@@ -72,7 +71,7 @@ export const FinalSection = () => {
             {/* Right: Form */}
             <div className="lg:col-span-6 lg:col-start-7">
               <AnimatedSection delay={200}>
-                <div className="bg-paper-bg sketch-border rounded-2xl p-8 md:p-10 shadow-sketch relative">
+                <div className="bg-pastel-yellow sketch-border rounded-2xl p-8 md:p-10 shadow-sketch relative">
                   <Staple className="top-4 left-4 rotate-45" />
                   <Staple className="top-6 left-2 rotate-45" />
                   <ContactForm />

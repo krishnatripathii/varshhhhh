@@ -4,14 +4,14 @@ import { AnimatedSection } from '../ui/AnimatedSection';
 import { Plus, Minus } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { SpidermanMaskDoodle, ArrowDoodle } from '../ui/Doodles';
-import { Paperclip, Tape } from '../ui/Stationery';
+import { Paperclip } from '../ui/Stationery';
 
 
 export const FaqSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-24 md:py-32 bg-paper-surface">
+    <section className="py-24 md:py-32 bg-pastel-blue">
       <div className="absolute top-[5%] right-[5%] w-48 h-48 text-pencil-light/10 rotate-12 pointer-events-none hidden md:block">
         <SpidermanMaskDoodle />
       </div>
@@ -19,7 +19,7 @@ export const FaqSection = () => {
         <ArrowDoodle />
       </div>
       <div className="max-w-4xl mx-auto px-6 md:px-12 relative z-10">
-        <Paperclip className="top-[5%] left-[5%] w-16 h-16 -rotate-12" />
+        <Paperclip className="top-[-25px] left-16 w-14 h-14 -rotate-[15deg] text-pencil-medium/60" />
         <AnimatedSection className="mb-16">
           <p className="text-xs tracking-[0.3em] uppercase text-pencil-dark font-bold/70 mb-4 font-bold flex items-center gap-3">
             <span className="w-6 h-px bg-marker-yellow/40" />

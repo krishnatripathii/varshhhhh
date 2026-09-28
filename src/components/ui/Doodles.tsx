@@ -74,3 +74,13 @@ export const ArrowDoodle = ({ className = "" }: { className?: string }) => (
     <path d="M 70 10 L 80 20 L 70 30" />
   </svg>
 );
+
+export const PineappleDoodle = ({ className = "" }: { className?: string }) => (
+  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M 50 40 L 50 15 L 42 30 L 30 20 L 38 38 L 22 35 L 35 48 Z" />
+    <path d="M 50 40 L 50 15 L 58 30 L 70 20 L 62 38 L 78 35 L 65 48 Z" />
+    <ellipse cx="50" cy="68" rx="18" ry="24" />
+    <path d="M 38 55 L 62 75 M 38 65 L 58 85 M 43 48 L 62 63" />
+    <path d="M 62 55 L 38 75 M 62 65 L 42 85 M 57 48 L 38 63" />
+  </svg>
+);

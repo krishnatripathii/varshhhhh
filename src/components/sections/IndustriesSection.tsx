@@ -7,7 +7,7 @@ import { Paperclip } from '../ui/Stationery';
 
 export const IndustriesSection = () => {
   return (
-    <section id="industries" className="py-24 md:py-32 bg-paper-surface relative overflow-hidden">
+    <section id="industries" className="py-24 md:py-32 bg-pastel-lilac relative overflow-hidden">
       <div className="absolute top-[5%] left-[5%] w-48 h-48 text-pencil-light/10 -rotate-12 pointer-events-none hidden md:block">
         <SpiderWebDoodle />
       </div>
@@ -15,7 +15,7 @@ export const IndustriesSection = () => {
         <ArrowDoodle />
       </div>
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-        <Paperclip className="top-[5%] right-[5%] w-16 h-16 rotate-[20deg]" />
+        <Paperclip className="top-[-25px] right-16 w-14 h-14 rotate-[15deg] text-pencil-medium/60" />
         <AnimatedSection className="max-w-3xl mb-20">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight mb-6 text-pencil-dark">
             Different businesses. Different challenges.

@@ -11,10 +11,11 @@
   
   body {
     @apply bg-paper-bg text-pencil-dark font-sans;
-    background-image: 
-      linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
-    background-size: 20px 20px;
+    background-color: theme('colors.paper-bg');
+    background-image: radial-gradient(theme('colors.pencil-medium') 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-position: 0 0;
+    opacity: 0.95;
   }
 
   ::selection {

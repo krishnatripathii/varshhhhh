@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export const ServicesSection = () => {
   return (
-    <section id="services" className="py-24 md:py-32 bg-paper-surface relative overflow-hidden">
+    <section id="services" className="py-24 md:py-32 bg-pastel-blush relative overflow-hidden">
       {/* Subtle geometric accent */}
       <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-marker-yellow/[0.02] rounded-full blur-[120px] pointer-events-none" />
 
