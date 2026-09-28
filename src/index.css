@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    @apply bg-paper-bg text-pencil-dark font-sans;
+    background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  ::selection {
+    @apply bg-marker-yellow text-pencil-dark;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-paper-bg;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-pencil-light rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-pencil-medium;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .marker-highlight {
+    @apply relative inline-block z-0 whitespace-nowrap;
+  }
+  .marker-highlight::after {
+    content: '';
+    @apply absolute left-0 bottom-1 w-full h-3 bg-marker-yellow -z-10 opacity-70 -rotate-1 rounded-sm;
+  }
+  .marker-highlight-green::after {
+    @apply bg-marker-green;
+  }
+  .marker-highlight-blue::after {
+    @apply bg-marker-blue;
+  }
+  .sketch-border {
+    border: 2px solid theme('colors.pencil-dark');
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  }
+  .sketch-border-subtle {
+    border: 1px solid theme('colors.pencil-medium');
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:focus-visible {
+  @apply outline-none ring-2 ring-pencil-dark ring-offset-2 ring-offset-paper-bg;
+}
