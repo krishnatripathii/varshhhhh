@@ -1,9 +1,18 @@
 import React from 'react';
+import { Tape, Staple, Paperclip } from '../ui/Stationery';
 import { AnimatedSection } from '../ui/AnimatedSection';
+import { SpiderWebDoodle, SpidermanMaskDoodle } from '../ui/Doodles';
+
 
 export const BeforeAfterSection = () => {
   return (
     <section className="py-24 md:py-32 bg-paper-bg relative overflow-hidden font-sans">
+      <div className="absolute top-[5%] left-[5%] w-32 h-32 text-pencil-light/10 -rotate-12 pointer-events-none hidden md:block">
+        <SpidermanMaskDoodle />
+      </div>
+      <div className="absolute bottom-[5%] right-[5%] w-48 h-48 text-pencil-light/20 rotate-45 pointer-events-none hidden md:block">
+        <SpiderWebDoodle />
+      </div>
       <div className="max-w-6xl mx-auto px-6 md:px-12 relative z-10">
         <AnimatedSection className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-pencil-dark mb-4">
@@ -15,13 +24,14 @@ export const BeforeAfterSection = () => {
         </AnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 relative">
+          <Paperclip className="top-[-20px] left-[-20px] w-12 h-12 -rotate-12 hidden md:block" />
           {/* Hand-drawn divider line for desktop */}
           <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-pencil-light/30 -translate-x-1/2 sketch-border-subtle"></div>
           
           {/* Before Sticky Note */}
           <AnimatedSection delay={100} className="relative">
             <div className="bg-[#fefce8] p-8 md:p-10 shadow-sketch rounded-bl-3xl rounded-tr-3xl rotate-1 transform hover:rotate-0 transition-transform duration-300">
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 -mt-3 w-12 h-6 bg-red-200/50 backdrop-blur-sm shadow-sm rotate-3"></div>
+              <Tape className="top-[-10px] left-1/2 -translate-x-1/2 rotate-3" />
               <h3 className="text-3xl font-display font-bold text-red-500 mb-6 flex items-center gap-2">
                 <span className="line-through text-pencil-dark opacity-50 text-xl">x</span> Before AI-VARSH
               </h3>
@@ -56,7 +66,7 @@ export const BeforeAfterSection = () => {
           {/* After Sticky Note */}
           <AnimatedSection delay={200} className="relative">
             <div className="bg-[#f0fdf4] p-8 md:p-10 shadow-sketch rounded-br-3xl rounded-tl-3xl -rotate-1 transform hover:rotate-0 transition-transform duration-300">
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 -mt-3 w-12 h-6 bg-green-200/50 backdrop-blur-sm shadow-sm -rotate-2"></div>
+              <Tape className="top-[-10px] left-1/2 -translate-x-1/2 -rotate-2" />
               <h3 className="text-3xl font-display font-bold text-green-600 mb-6 flex items-center gap-2">
                 <span className="text-green-500 text-xl">✓</span> After AI-VARSH
               </h3>

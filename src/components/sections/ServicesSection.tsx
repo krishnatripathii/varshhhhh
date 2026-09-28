@@ -1,4 +1,5 @@
 import React from 'react';
+import { RobotDoodle, NotebookSquiggle } from '../ui/Doodles';
 import { SERVICES } from '../../data/services';
 import { AnimatedSection } from '../ui/AnimatedSection';
 import { ArrowRight } from 'lucide-react';
@@ -9,6 +10,12 @@ export const ServicesSection = () => {
       {/* Subtle geometric accent */}
       <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-marker-yellow/[0.02] rounded-full blur-[120px] pointer-events-none" />
 
+      <div className="absolute top-[10%] left-[2%] w-20 h-20 text-pencil-light/20 -rotate-12 pointer-events-none hidden md:block">
+        <RobotDoodle />
+      </div>
+      <div className="absolute bottom-[5%] right-[5%] w-32 h-10 text-pencil-light/20 rotate-6 pointer-events-none hidden md:block">
+        <NotebookSquiggle />
+      </div>
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <AnimatedSection className="max-w-3xl mb-16 md:mb-20">
           <p className="text-xs tracking-[0.3em] uppercase text-pencil-dark font-bold/70 mb-4 font-bold flex items-center gap-3">

@@ -1,5 +1,8 @@
 import React from 'react';
 import { AnimatedSection } from '../ui/AnimatedSection';
+import { SpidermanMaskDoodle, ArrowDoodle } from '../ui/Doodles';
+import { Paperclip } from '../ui/Stationery';
+
 
 const technologies = [
   'AI', 'Python', 'Computer Vision', 'Automation',
@@ -10,7 +13,11 @@ const technologies = [
 export const WebAppSection = () => {
   return (
     <section className="py-24 md:py-32 bg-paper-dark relative overflow-hidden">
+      <div className="absolute top-[20%] right-[10%] w-24 h-24 text-pencil-light/10 -rotate-12 pointer-events-none hidden md:block">
+        <SpidermanMaskDoodle />
+      </div>
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+        <Paperclip className="top-10 right-20 w-12 h-12 rotate-[30deg]" />
         <AnimatedSection className="mb-16">
           <p className="text-xs tracking-[0.3em] uppercase text-pencil-dark font-bold/70 mb-4 font-bold flex items-center gap-3">
             <span className="w-6 h-px bg-marker-yellow/40" />

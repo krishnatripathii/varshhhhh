@@ -1,12 +1,23 @@
 import React from 'react';
 import { AnimatedSection } from '../ui/AnimatedSection';
+import { SpiderWebDoodle, NotebookSquiggle, RobotDoodle } from '../ui/Doodles';
+import { Tape, Staple } from '../ui/Stationery';
+
 
 const creativeWords = ['WEB', 'DESIGN', 'MOTION', 'AI', 'AUTOMATION', 'GROWTH'];
 
 export const WorkSection = () => {
   return (
     <section id="work" className="py-24 md:py-32 bg-paper-surface relative overflow-hidden">
+      <div className="absolute top-[10%] left-[2%] w-24 h-24 text-pencil-light/10 rotate-12 pointer-events-none hidden md:block">
+        <SpiderWebDoodle />
+      </div>
+      <div className="absolute bottom-[20%] right-[5%] w-32 h-32 text-pencil-light/10 -rotate-12 pointer-events-none hidden md:block">
+        <RobotDoodle />
+      </div>
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+        <Tape className="top-[-10px] right-10 rotate-3" />
+        <Tape className="bottom-[-10px] left-1/4 -rotate-2" />
         <AnimatedSection className="mb-16">
           <p className="text-xs tracking-[0.3em] uppercase text-pencil-dark font-bold/70 mb-4 font-bold flex items-center gap-3">
             <span className="w-6 h-px bg-marker-yellow/40" />
@@ -21,7 +32,7 @@ export const WorkSection = () => {
           {creativeWords.map((word, i) => (
             <AnimatedSection key={word} delay={i * 80}>
               <div className="group cursor-default">
-                <span className="text-4xl md:text-6xl lg:text-7xl font-display font-extrabold text-pencil-dark/10 group-hover:text-pencil-dark/30 transition-colors duration-500 tracking-tighter">
+                <span className="text-4xl md:text-6xl lg:text-7xl font-display font-extrabold text-pencil-dark/40 group-hover:text-pencil-dark transition-colors duration-500 tracking-tighter">
                   {word}
                 </span>
               </div>

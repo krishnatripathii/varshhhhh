@@ -2,6 +2,9 @@ import React from 'react';
 import { ContactForm } from '../ui/ContactForm';
 import { AnimatedSection } from '../ui/AnimatedSection';
 import { GeometricBackground } from '../ui/GeometricBackground';
+import { SpiderWebDoodle, NotebookSquiggle, RobotDoodle } from '../ui/Doodles';
+import { Tape, Staple } from '../ui/Stationery';
+
 
 export const FinalSection = () => {
   return (
@@ -10,7 +13,14 @@ export const FinalSection = () => {
       <div className="py-24 md:py-32 bg-paper-bg relative">
         <GeometricBackground variant="dense" />
 
-        <div className="max-w-5xl mx-auto px-6 md:px-12 text-center relative z-10">
+        <div className="absolute top-[10%] left-[10%] w-48 h-48 text-pencil-light/10 -rotate-12 pointer-events-none hidden md:block">
+        <SpiderWebDoodle />
+      </div>
+      <div className="absolute bottom-[20%] right-[10%] w-24 h-24 text-pencil-light/20 rotate-45 pointer-events-none hidden md:block">
+        <RobotDoodle />
+      </div>
+      <div className="max-w-5xl mx-auto px-6 md:px-12 text-center relative z-10">
+        <Tape className="top-10 left-1/2 -translate-x-1/2 rotate-3" />
           <AnimatedSection>
             <p className="text-xs tracking-[0.3em] uppercase text-pencil-dark font-bold/70 mb-6 font-bold">
               READY?
@@ -62,7 +72,9 @@ export const FinalSection = () => {
             {/* Right: Form */}
             <div className="lg:col-span-6 lg:col-start-7">
               <AnimatedSection delay={200}>
-                <div className="bg-paper-dark/50 rounded-2xl p-8 md:p-10 border border-pencil-medium/20">
+                <div className="bg-paper-bg sketch-border rounded-2xl p-8 md:p-10 shadow-sketch relative">
+                  <Staple className="top-4 left-4 rotate-45" />
+                  <Staple className="top-6 left-2 rotate-45" />
                   <ContactForm />
                 </div>
               </AnimatedSection>

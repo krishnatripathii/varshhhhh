@@ -1,4 +1,5 @@
 import React from 'react';
+import { AIDoodle, SpiderWebDoodle } from '../ui/Doodles';
 import { AnimatedSection } from '../ui/AnimatedSection';
 import { ArrowRight } from 'lucide-react';
 
@@ -14,6 +15,12 @@ const solutions = [
 export const SolutionsSection = () => {
   return (
     <section id="solutions" className="py-24 md:py-32 bg-paper-dark relative overflow-hidden">
+      <div className="absolute top-[40%] right-[3%] w-24 h-24 text-pencil-light/20 rotate-12 pointer-events-none hidden lg:block">
+        <AIDoodle />
+      </div>
+      <div className="absolute bottom-[10%] left-[2%] w-48 h-48 text-pencil-light/10 -rotate-45 pointer-events-none hidden lg:block">
+        <SpiderWebDoodle />
+      </div>
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <AnimatedSection className="max-w-3xl mb-16 md:mb-20">
           <p className="text-xs tracking-[0.3em] uppercase text-pencil-dark font-bold/70 mb-4 font-bold flex items-center gap-3">
