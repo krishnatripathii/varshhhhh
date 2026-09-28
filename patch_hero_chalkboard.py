@@ -1,4 +1,7 @@
-import React from 'react';
+import os
+
+filepath = 'src/components/sections/Hero.tsx'
+content = """import React from 'react';
 import { motion } from 'framer-motion';
 import { PineappleDoodle, SpiderWebDoodle, RobotDoodle, SpidermanMaskDoodle, NotebookSquiggle, ArrowDoodle, AIDoodle } from '../ui/Doodles';
 
@@ -124,3 +127,8 @@ export const Hero = () => {
     </section>
   );
 };
+"""
+
+with open(filepath, 'w') as f:
+    f.write(content)
+

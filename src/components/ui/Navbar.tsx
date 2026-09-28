@@ -49,7 +49,7 @@ export const Navbar = () => {
           aria-label="AI-VARSH Home"
         >
           <img src="/logo.png" alt="AI-VARSH Logo" className="w-10 h-10 rounded-full" />
-          <span className="font-display font-bold text-lg tracking-tight text-pencil-dark">
+          <span className={`font-display font-bold text-lg tracking-tight transition-colors ${!isScrolled && !isMobileOpen ? "text-white" : "text-pencil-dark"}`}>
             AI-VARSH
           </span>
         </a>
@@ -61,7 +61,7 @@ export const Navbar = () => {
               key={link.href}
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
-              className="text-sm font-medium text-pencil-medium hover:text-pencil-dark font-bold transition-colors duration-300 tracking-wide"
+              className={`text-sm font-medium hover:font-bold transition-colors duration-300 tracking-wide ${!isScrolled ? "text-white/80 hover:text-white" : "text-pencil-medium hover:text-pencil-dark"}`}
             >
               {link.label}
             </a>
@@ -80,7 +80,7 @@ export const Navbar = () => {
           </a>
 
           <button
-            className="lg:hidden text-pencil-dark p-2 -mr-2 hover:text-pencil-dark font-bold transition-colors"
+            className={`lg:hidden p-2 -mr-2 font-bold transition-colors ${!isScrolled && !isMobileOpen ? "text-white" : "text-pencil-dark"}`}
             onClick={() => setIsMobileOpen(!isMobileOpen)}
             aria-label={isMobileOpen ? 'Close menu' : 'Open menu'}
           >
