@@ -10,7 +10,7 @@ export const ServicesSection = () => {
       <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-marker-yellow/[0.02] rounded-full blur-[120px] pointer-events-none" />
 
       
-      <div className="absolute bottom-[5%] right-[5%] w-32 h-10 text-white/40/20 rotate-6 pointer-events-none hidden md:block">
+      <div className="absolute bottom-[5%] right-[5%] w-32 h-10 text-white/20 rotate-6 pointer-events-none hidden md:block">
       </div>
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <AnimatedSection className="max-w-3xl mb-16 md:mb-20">
@@ -26,7 +26,7 @@ export const ServicesSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {SERVICES.map((service, index) => (
             <AnimatedSection key={service.id} delay={index * 60}>
-              <div className="group bg-transparent  p-6 md:p-8 h-full flex flex-col hover:-translate-y-1.5 hover: transition-all duration-400 cursor-default relative overflow-hidden">
+              <div className="group glass-panel glass-panel-hover p-6 md:p-8 h-full flex flex-col hover:-translate-y-1.5 hover: transition-all duration-400 cursor-default relative overflow-hidden">
                 {/* Saffron indicator on hover */}
                 <div className="absolute top-2 left-2 w-0 h-2 bg-marker-yellow/50 group-hover:w-10 transition-all duration-500 rounded-full" />
 
@@ -36,14 +36,14 @@ export const ServicesSection = () => {
                   </span>
                   <ArrowRight
                     size={16}
-                    className="text-white/70/30 group-hover:text-white font-bold group-hover:translate-x-1 transition-all duration-300"
+                    className="text-white/30 group-hover:text-white font-bold group-hover:translate-x-1 transition-all duration-300"
                   />
                 </div>
 
                 <h3 className="text-base font-display font-bold text-white mb-3 tracking-tight group-hover:text-white font-bold transition-colors duration-300">
                   {service.title}
                 </h3>
-                <p className="text-sm text-white/70/70 leading-relaxed flex-grow">
+                <p className="text-sm text-white/70 leading-relaxed flex-grow">
                   {service.description}
                 </p>
               </div>

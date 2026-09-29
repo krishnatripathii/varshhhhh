@@ -1,5 +1,5 @@
 import React from 'react';
-import { Staple, Paperclip } from '../ui/Stationery';
+
 import { AnimatedSection } from '../ui/AnimatedSection';
 
 
@@ -19,7 +19,7 @@ export const BeforeAfterSection = () => {
         </AnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 relative">
-          <Paperclip className="top-[-25px] left-10 w-14 h-14 -rotate-12 hidden md:block text-white/60" />
+          
           {/* Hand-drawn divider line for desktop */}
           <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-white/20 -translate-x-1/2 -subtle"></div>
           
