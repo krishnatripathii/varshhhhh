@@ -3,32 +3,42 @@ import React, { useEffect, useState } from 'react';
 export const SkyBackground = () => {
   const [stars, setStars] = useState<{ id: number; left: string; top: string; delay: string; duration: string; size: string; color: string }[]>([]);
   const [shootingStars, setShootingStars] = useState<{ id: number; left: string; top: string; delay: string; duration: string }[]>([]);
+  const [satellites, setSatellites] = useState<{ id: number; top: string; delay: string; duration: string }[]>([]);
 
   useEffect(() => {
-    // Generate twinkling stars for the entire document height
-    const newStars = Array.from({ length: 400 }).map((_, i) => {
+    // Generate massive amount of twinkling stars for a dense, living sky
+    const newStars = Array.from({ length: 1200 }).map((_, i) => {
       const topPercent = Math.random() * 100;
       return {
         id: i,
         left: `${Math.random() * 100}%`,
         top: `${topPercent}%`,
-        delay: `${Math.random() * 4}s`,
-        duration: `${Math.random() * 3 + 2}s`,
-        size: `${Math.random() * 2 + 0.5}px`,
+        delay: `${Math.random() * 5}s`,
+        duration: `${Math.random() * 4 + 2}s`, // Varied twinkling speeds
+        size: `${Math.random() * 2 + 0.5}px`, // Varied sizes
         color: '#ffffff'
       };
     });
     setStars(newStars);
 
-    // Generate shooting stars everywhere, frequent and fast
+    // Generate fast, random shooting stars all over
     const newShootingStars = Array.from({ length: 15 }).map((_, i) => ({
       id: i,
       left: `${Math.random() * 100 + 20}%`, 
       top: `${Math.random() * 100}%`,
-      delay: `${Math.random() * 8}s`,
-      duration: `${Math.random() * 2 + 3}s` // fast shooting
+      delay: `${Math.random() * 10}s`,
+      duration: `${Math.random() * 2 + 2}s`
     }));
     setShootingStars(newShootingStars);
+
+    // Generate slow-moving satellites
+    const newSatellites = Array.from({ length: 6 }).map((_, i) => ({
+      id: i,
+      top: `${Math.random() * 80 + 10}%`,
+      delay: `${Math.random() * 30}s`,
+      duration: `${Math.random() * 30 + 40}s` // 40-70 seconds to cross the screen
+    }));
+    setSatellites(newSatellites);
   }, []);
 
   return (
@@ -41,15 +51,22 @@ export const SkyBackground = () => {
         }}
       />
       
-      {/* Galactic Nebulae / Subtle Background Elements */}
-      <div className="absolute top-[5%] left-[10%] w-[40rem] h-[30rem] bg-[#c44536]/20 rounded-full blur-[100px] pointer-events-none animate-pulse-slow mix-blend-screen" />
-      <div className="absolute top-[40%] right-[10%] w-[50rem] h-[40rem] bg-[#291a40]/30 rounded-full blur-[120px] pointer-events-none animate-pulse-slow mix-blend-screen" style={{ animationDelay: '2s' }} />
-      <div className="absolute top-[80%] left-[20%] w-[60rem] h-[40rem] bg-[#583270]/10 rounded-full blur-[150px] pointer-events-none animate-pulse-slow mix-blend-screen" style={{ animationDelay: '4s' }} />
+      {/* Living Sky Elements: Auroras and Galactic Nebulae */}
+      <div className="absolute inset-0 z-[-2] pointer-events-none overflow-hidden">
+        {/* Deep pulsing galaxy dust */}
+        <div className="absolute top-[5%] left-[10%] w-[40rem] h-[30rem] bg-[#c44536]/30 rounded-full blur-[100px] animate-pulse-slow mix-blend-screen" />
+        <div className="absolute top-[40%] right-[10%] w-[50rem] h-[40rem] bg-[#291a40]/40 rounded-full blur-[120px] animate-pulse-slow mix-blend-screen" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-[80%] left-[20%] w-[60rem] h-[40rem] bg-[#583270]/20 rounded-full blur-[150px] animate-pulse-slow mix-blend-screen" style={{ animationDelay: '4s' }} />
+        
+        {/* Dynamic sweeping Auroras */}
+        <div className="absolute top-[30%] left-[-10%] w-[120vw] h-[20vh] bg-gradient-to-r from-transparent via-[#7a2850]/20 to-transparent blur-[80px] animate-aurora mix-blend-screen" />
+        <div className="absolute top-[60%] left-[-10%] w-[120vw] h-[15vh] bg-gradient-to-r from-transparent via-[#26143c]/30 to-transparent blur-[80px] animate-aurora mix-blend-screen" style={{ animationDelay: '7s' }} />
+      </div>
 
-      {/* Absolute Container for Scrolling Elements */}
+      {/* Absolute Container for Stars, Shooting Stars, Satellites */}
       <div className="absolute inset-0 z-[-1] pointer-events-none overflow-hidden">
         
-        {/* Stars */}
+        {/* Massive Starfield */}
         {stars.map(star => (
           <div
             key={star.id}
@@ -62,12 +79,25 @@ export const SkyBackground = () => {
               backgroundColor: star.color,
               animationDelay: star.delay,
               animationDuration: star.duration,
-              opacity: Math.random() * 0.6 + 0.2
+              opacity: Math.random() * 0.7 + 0.3
             }}
           />
         ))}
 
-        {/* Shooting Stars (Fast and frequent everywhere) */}
+        {/* Slow-moving Satellites */}
+        {satellites.map(sat => (
+          <div
+            key={sat.id}
+            className="absolute w-[2px] h-[2px] bg-white rounded-full animate-satellite shadow-[0_0_4px_rgba(255,255,255,0.8)]"
+            style={{
+              top: sat.top,
+              animationDelay: sat.delay,
+              animationDuration: sat.duration
+            }}
+          />
+        ))}
+
+        {/* Shooting Stars */}
         {shootingStars.map(star => (
           <div
             key={star.id}

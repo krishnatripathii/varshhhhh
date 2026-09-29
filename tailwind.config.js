@@ -20,6 +20,9 @@ export default {
         display: ['Space Grotesk', 'sans-serif'],
       },
       animation: {
+        'satellite': 'satellite 40s linear infinite',
+        'aurora': 'aurora 15s ease-in-out infinite',
+
         'fade-in': 'fadeIn 0.8s ease-out forwards',
         'slide-up': 'slideUp 0.8s ease-out forwards',
         'twinkle': 'twinkle 4s ease-in-out infinite',
@@ -27,6 +30,15 @@ export default {
         'pulse-slow': 'pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
       keyframes: {
+        satellite: {
+          '0%': { transform: 'translateX(-10vw) translateY(0)' },
+          '100%': { transform: 'translateX(110vw) translateY(20vh)' },
+        },
+        aurora: {
+          '0%, 100%': { transform: 'translateX(-5%) skew(-10deg)', opacity: '0.3' },
+          '50%': { transform: 'translateX(5%) skew(10deg)', opacity: '0.5' },
+        },
+
         fadeIn: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
