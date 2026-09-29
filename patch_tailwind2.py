@@ -1,4 +1,6 @@
-/** @type {import('tailwindcss').Config} */
+import os
+
+tw = """/** @type {import('tailwindcss').Config} */
 export default {
   content: [
     "./index.html",
@@ -11,8 +13,8 @@ export default {
         'miami-magenta': '#7a2850',
         'miami-purple': '#26143c',
         'sky-midnight': '#050508',
-        'glass-border': 'rgba(255, 255, 255, 0.2)',
-        'glass-fill': 'rgba(255, 255, 255, 0.1)',
+        'glass-border': 'rgba(255, 255, 255, 0.15)',
+        'glass-fill': 'rgba(255, 255, 255, 0.08)',
         'text-soft': '#fcf4f0',
       },
       fontFamily: {
@@ -40,9 +42,9 @@ export default {
           '50%': { opacity: '1', transform: 'scale(1.2)' },
         },
         shooting: {
-          '0%': { transform: 'translateX(0) translateY(0) rotate(-35deg)', opacity: '1' },
-          '10%': { transform: 'translateX(-1000px) translateY(700px) rotate(-35deg)', opacity: '0' },
-          '100%': { transform: 'translateX(-1000px) translateY(700px) rotate(-35deg)', opacity: '0' },
+          '0%': { transform: 'translateX(0) translateY(0) rotate(45deg)', opacity: '1' },
+          '20%': { transform: 'translateX(-1000px) translateY(1000px) rotate(45deg)', opacity: '0' },
+          '100%': { transform: 'translateX(-1000px) translateY(1000px) rotate(45deg)', opacity: '0' },
         }
       },
       boxShadow: {
@@ -54,3 +56,6 @@ export default {
   },
   plugins: [],
 }
+"""
+with open('tailwind.config.js', 'w') as f:
+    f.write(tw)

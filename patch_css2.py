@@ -1,4 +1,4 @@
-@tailwind base;
+css = """@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -80,3 +80,6 @@
 :focus-visible {
   @apply outline-none ring-2 ring-white/50 ring-offset-2 ring-offset-transparent;
 }
+"""
+with open('src/index.css', 'w') as f:
+    f.write(css)
