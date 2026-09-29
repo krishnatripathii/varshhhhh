@@ -1,18 +1,13 @@
 import React from 'react';
 import { Staple, Paperclip } from '../ui/Stationery';
 import { AnimatedSection } from '../ui/AnimatedSection';
-import { SpiderWebDoodle, SpidermanMaskDoodle } from '../ui/Doodles';
 
 
 export const BeforeAfterSection = () => {
   return (
-    <section className="py-24 md:py-32 bg-board-green relative overflow-hidden font-sans">
-      <div className="absolute top-[5%] left-[5%] w-32 h-32 text-chalk-green/30 -rotate-12 pointer-events-none hidden md:block">
-        <SpidermanMaskDoodle />
-      </div>
-      <div className="absolute bottom-[5%] right-[5%] w-48 h-48 text-chalk-green/30 rotate-45 pointer-events-none hidden md:block">
-        <SpiderWebDoodle />
-      </div>
+    <section className="py-24 md:py-32 bg-transparent relative overflow-hidden font-sans">
+      
+      
       <div className="max-w-6xl mx-auto px-6 md:px-12 relative z-10">
         <AnimatedSection className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
@@ -26,11 +21,11 @@ export const BeforeAfterSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 relative">
           <Paperclip className="top-[-25px] left-10 w-14 h-14 -rotate-12 hidden md:block text-white/60" />
           {/* Hand-drawn divider line for desktop */}
-          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-white/20 -translate-x-1/2 sketch-border-subtle"></div>
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-white/20 -translate-x-1/2 -subtle"></div>
           
           {/* Before Sticky Note */}
           <AnimatedSection delay={100} className="relative">
-            <div className="bg-white/5 backdrop-blur-md border border-white/10 p-8 md:p-10 shadow-sketch rounded-bl-3xl rounded-tr-3xl rotate-1 transform hover:rotate-0 transition-transform duration-300">
+            <div className="glass-panel p-8 md:p-10  rounded-bl-3xl rounded-tr-3xl rotate-1 transform hover:rotate-0 transition-transform duration-300">
               <h3 className="text-3xl font-display font-bold text-chalk-pink mb-6 flex items-center gap-2">
                 <span className="line-through text-white opacity-50 text-xl">x</span> Before AI-VARSH
               </h3>
@@ -64,7 +59,7 @@ export const BeforeAfterSection = () => {
 
           {/* After Sticky Note */}
           <AnimatedSection delay={200} className="relative">
-            <div className="bg-white/5 backdrop-blur-md border border-white/10 p-8 md:p-10 shadow-sketch rounded-br-3xl rounded-tl-3xl -rotate-1 transform hover:rotate-0 transition-transform duration-300">
+            <div className="glass-panel p-8 md:p-10  rounded-br-3xl rounded-tl-3xl -rotate-1 transform hover:rotate-0 transition-transform duration-300">
               <h3 className="text-3xl font-display font-bold text-chalk-green mb-6 flex items-center gap-2">
                 <span className="text-chalk-green text-xl">✓</span> After AI-VARSH
               </h3>

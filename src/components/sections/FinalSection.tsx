@@ -2,7 +2,6 @@ import React from 'react';
 import { ContactForm } from '../ui/ContactForm';
 import { AnimatedSection } from '../ui/AnimatedSection';
 import { GeometricBackground } from '../ui/GeometricBackground';
-import { SpiderWebDoodle, NotebookSquiggle, RobotDoodle } from '../ui/Doodles';
 import { Staple } from '../ui/Stationery';
 
 
@@ -10,15 +9,11 @@ export const FinalSection = () => {
   return (
     <section id="contact" className="relative overflow-hidden">
       {/* CTA Block */}
-      <div className="py-24 md:py-32 bg-board-green relative">
+      <div className="py-24 md:py-32 bg-transparent relative">
         <GeometricBackground variant="dense" />
 
-        <div className="absolute top-[10%] left-[10%] w-48 h-48 text-chalk-pink/30/10 -rotate-12 pointer-events-none hidden md:block">
-        <SpiderWebDoodle />
-      </div>
-      <div className="absolute bottom-[20%] right-[10%] w-24 h-24 text-chalk-blue/30/20 rotate-45 pointer-events-none hidden md:block">
-        <RobotDoodle />
-      </div>
+        
+      
       <div className="max-w-5xl mx-auto px-6 md:px-12 text-center relative z-10">
         <AnimatedSection>
             <p className="text-xs tracking-[0.3em] uppercase text-white font-bold/70 mb-6 font-bold">
@@ -48,7 +43,7 @@ export const FinalSection = () => {
       </div>
 
       {/* Contact Form Block */}
-      <div id="contact-form" className="py-24 md:py-32 bg-board-navy">
+      <div id="contact-form" className="py-24 md:py-32 bg-transparent">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12">
             {/* Left */}
@@ -71,7 +66,7 @@ export const FinalSection = () => {
             {/* Right: Form */}
             <div className="lg:col-span-6 lg:col-start-7">
               <AnimatedSection delay={200}>
-                <div className="bg-board-green sketch-border rounded-2xl p-8 md:p-10 shadow-sketch relative">
+                <div className="bg-transparent  rounded-2xl p-8 md:p-10  relative">
                   <Staple className="top-4 left-4 rotate-45" />
                   <Staple className="top-6 left-2 rotate-45" />
                   <ContactForm />

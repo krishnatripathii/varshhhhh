@@ -36,8 +36,8 @@ export const Navbar = () => {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-6 md:px-12 flex items-center justify-between ${
           isScrolled
-            ? 'py-3 bg-board-green/50 backdrop-blur-xl border-b border-white/10'
-            : 'py-5 bg-transparent border-b border-transparent'
+            ? 'py-4 bg-white/5 backdrop-blur-2xl border-b border-white/10 shadow-glass'
+            : 'py-6 bg-transparent border-b border-transparent'
         }`}
         role="navigation"
       >
@@ -45,11 +45,11 @@ export const Navbar = () => {
         <a
           href="#"
           onClick={(e) => handleNavClick(e, '#hero')}
-          className="flex items-center gap-2.5 z-50 relative group"
+          className="flex items-center gap-3 z-50 relative group"
           aria-label="AI-VARSH Home"
         >
-          <img src="/logo.png" alt="AI-VARSH Logo" className="w-10 h-10 rounded-full" />
-          <span className={`font-display font-bold text-lg tracking-tight transition-colors ${"text-white"}`}>
+          <img src="/logo.png" alt="AI-VARSH Logo" className="w-10 h-10 rounded-full shadow-glow" />
+          <span className="font-display font-bold text-xl tracking-tight text-white">
             AI-VARSH
           </span>
         </a>
@@ -61,7 +61,7 @@ export const Navbar = () => {
               key={link.href}
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
-              className={`text-sm font-medium hover:font-bold transition-colors duration-300 tracking-wide ${"text-white/80 hover:text-white"}`}
+              className="text-sm font-light text-white/80 hover:text-white hover:text-glow transition-all duration-300 tracking-wider uppercase"
             >
               {link.label}
             </a>
@@ -73,14 +73,14 @@ export const Navbar = () => {
           <a
             href="#contact"
             onClick={(e) => handleNavClick(e, '#contact')}
-            className="inline-flex items-center gap-2 text-sm font-bold text-black bg-marker-yellow px-5 py-2.5 rounded-full hover:bg-marker-yellow/90 transition-all duration-300 group"
+            className="inline-flex items-center gap-2 text-xs font-bold text-black bg-white px-6 py-2.5 rounded-full hover:bg-white/90 transition-all duration-300 group shadow-glass uppercase tracking-wider"
           >
             Contact Us
             <span className="group-hover:translate-x-0.5 transition-transform">→</span>
           </a>
 
           <button
-            className={`lg:hidden p-2 -mr-2 font-bold transition-colors ${"text-white"}`}
+            className="lg:hidden text-white p-2 -mr-2 hover:text-white/80 transition-colors"
             onClick={() => setIsMobileOpen(!isMobileOpen)}
             aria-label={isMobileOpen ? 'Close menu' : 'Open menu'}
           >
@@ -95,7 +95,7 @@ export const Navbar = () => {
           isMobileOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
       >
-        <div className="absolute inset-0 bg-board-green" onClick={() => setIsMobileOpen(false)} />
+        <div className="absolute inset-0 bg-sky-midnight/90 backdrop-blur-2xl" onClick={() => setIsMobileOpen(false)} />
 
         <div
           className={`absolute inset-0 flex flex-col items-center justify-center gap-8 transition-transform duration-700 ease-out ${
@@ -107,7 +107,7 @@ export const Navbar = () => {
               key={link.href}
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
-              className="text-3xl font-display font-bold text-white hover:text-white font-bold transition-colors"
+              className="text-4xl font-display font-light text-white hover:text-glow transition-all"
               style={{ transitionDelay: isMobileOpen ? `${i * 75}ms` : '0ms' }}
             >
               {link.label}
@@ -117,7 +117,7 @@ export const Navbar = () => {
           <a
             href="#contact"
             onClick={(e) => handleNavClick(e, '#contact')}
-            className="mt-4 flex items-center gap-2 bg-marker-yellow text-black px-8 py-4 text-lg font-bold rounded-full hover:bg-marker-yellow/90 transition-colors"
+            className="mt-8 flex items-center gap-2 bg-white text-black px-10 py-4 text-sm uppercase tracking-widest font-bold rounded-full shadow-glass hover:bg-white/90 transition-all"
           >
             Contact Us <span>→</span>
           </a>

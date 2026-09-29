@@ -1,5 +1,4 @@
 import React from 'react';
-import { AIDoodle, SpiderWebDoodle } from '../ui/Doodles';
 import { AnimatedSection } from '../ui/AnimatedSection';
 import { ArrowRight } from 'lucide-react';
 
@@ -14,13 +13,9 @@ const solutions = [
 
 export const SolutionsSection = () => {
   return (
-    <section id="solutions" className="py-24 md:py-32 bg-board-green relative overflow-hidden">
-      <div className="absolute top-[40%] right-[3%] w-24 h-24 text-chalk-green/30/20 rotate-12 pointer-events-none hidden lg:block">
-        <AIDoodle />
-      </div>
-      <div className="absolute bottom-[10%] left-[2%] w-48 h-48 text-white/40/10 -rotate-45 pointer-events-none hidden lg:block">
-        <SpiderWebDoodle />
-      </div>
+    <section id="solutions" className="py-24 md:py-32 bg-transparent relative overflow-hidden">
+      
+      
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <AnimatedSection className="max-w-3xl mb-16 md:mb-20">
           <p className="text-xs tracking-[0.3em] uppercase text-white font-bold/70 mb-4 font-bold flex items-center gap-3">
@@ -35,7 +30,7 @@ export const SolutionsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {solutions.map((sol, index) => (
             <AnimatedSection key={sol.title} delay={index * 80}>
-              <div className="group bg-board-navy border border-white/10 p-7 h-full hover:-translate-y-1 sketch-border shadow-sketch transition-all duration-400 cursor-default">
+              <div className="group bg-transparent border border-white/10 p-7 h-full hover:-translate-y-1   transition-all duration-400 cursor-default">
                 <div className="flex items-start justify-between mb-4">
                   <h3 className="text-base font-display font-bold text-white group-hover:text-white font-bold transition-colors duration-300">
                     {sol.title}

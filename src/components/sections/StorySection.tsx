@@ -1,20 +1,15 @@
 import React from 'react';
-import { SpiderWebDoodle, NotebookSquiggle, ArrowDoodle } from '../ui/Doodles';
 import { AnimatedSection } from '../ui/AnimatedSection';
 
 export const StorySection = () => {
   return (
-    <section id="about" className="py-32 md:py-44 bg-board-green relative overflow-hidden">
+    <section id="about" className="py-32 md:py-44 bg-transparent relative overflow-hidden">
       {/* Subtle geometric accent */}
       <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-marker-yellow/20 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute right-0 top-1/3 w-[200px] h-[200px] bg-ai-ivory/[0.01] rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="absolute top-[5%] right-[5%] w-32 h-32 text-chalk-green/30/20 rotate-45 pointer-events-none hidden md:block">
-        <SpiderWebDoodle />
-      </div>
-      <div className="absolute bottom-[10%] left-[5%] w-40 h-40 text-chalk-yellow/30/10 -rotate-12 pointer-events-none hidden md:block">
-        <ArrowDoodle />
-      </div>
+      
+      
       <div className="max-w-5xl mx-auto px-6 md:px-12 relative z-10">
         <AnimatedSection className="text-center">
           <p className="text-xs tracking-[0.3em] uppercase text-white font-bold/70 mb-8 font-bold">

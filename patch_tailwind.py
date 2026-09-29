@@ -1,4 +1,6 @@
-/** @type {import('tailwindcss').Config} */
+import os
+
+tw = """/** @type {import('tailwindcss').Config} */
 export default {
   content: [
     "./index.html",
@@ -57,3 +59,6 @@ export default {
   },
   plugins: [],
 }
+"""
+with open('tailwind.config.js', 'w') as f:
+    f.write(tw)

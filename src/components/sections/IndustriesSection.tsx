@@ -1,19 +1,14 @@
 import React from 'react';
 import { INDUSTRIES } from '../../data/services';
 import { AnimatedSection } from '../ui/AnimatedSection';
-import { SpiderWebDoodle, ArrowDoodle } from '../ui/Doodles';
 import { Paperclip } from '../ui/Stationery';
 
 
 export const IndustriesSection = () => {
   return (
-    <section id="industries" className="py-24 md:py-32 bg-board-green relative overflow-hidden">
-      <div className="absolute top-[5%] left-[5%] w-48 h-48 text-chalk-blue/30/10 -rotate-12 pointer-events-none hidden md:block">
-        <SpiderWebDoodle />
-      </div>
-      <div className="absolute bottom-[5%] right-[5%] w-32 h-32 text-chalk-blue/30/10 rotate-12 pointer-events-none hidden md:block">
-        <ArrowDoodle />
-      </div>
+    <section id="industries" className="py-24 md:py-32 bg-transparent relative overflow-hidden">
+      
+      
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <Paperclip className="top-[-25px] right-16 w-14 h-14 rotate-[15deg] text-white/70/60" />
         <AnimatedSection className="max-w-3xl mb-20">
@@ -34,7 +29,7 @@ export const IndustriesSection = () => {
                 </div>
                 <div className="md:w-2/3 flex flex-wrap gap-2 md:opacity-0 md:-translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 delay-75">
                   {industry.items.slice(0, 4).map((item) => (
-                    <span key={item} className="px-4 py-2 bg-board-slate rounded-full text-xs font-bold text-white/70/60 border border-white/10">
+                    <span key={item} className="px-4 py-2 bg-transparent rounded-full text-xs font-bold text-white/70/60 border border-white/10">
                       {item}
                     </span>
                   ))}

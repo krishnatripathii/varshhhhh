@@ -4,7 +4,7 @@ import { AnimatedSection } from '../ui/AnimatedSection';
 
 export const WhySection = () => {
   return (
-    <section className="py-24 md:py-32 bg-board-slate border-y border-white/10">
+    <section className="py-24 md:py-32 bg-transparent border-y border-white/10">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <AnimatedSection className="max-w-4xl mb-24">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight text-white">

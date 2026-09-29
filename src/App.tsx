@@ -1,5 +1,6 @@
 import React from 'react';
 import { Navbar } from './components/ui/Navbar';
+import { SkyBackground } from './components/ui/SkyBackground';
 import { Footer } from './components/ui/Footer';
 import { Hero } from './components/sections/Hero';
 import { TrustSection } from './components/sections/TrustSection';
@@ -18,7 +19,8 @@ import { ErrorBoundary } from './ErrorBoundary';
 function App() {
   return (
     <ErrorBoundary>
-      <div className="relative w-full text-white bg-board-green">
+      <div className="relative w-full min-h-screen text-white">
+        <SkyBackground />
         <Navbar />
 
         <main className="relative w-full z-0 flex flex-col">

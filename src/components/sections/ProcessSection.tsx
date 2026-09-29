@@ -1,21 +1,16 @@
 import React from 'react';
 import { SITE_CONTENT } from '../../data/content';
 import { AnimatedSection } from '../ui/AnimatedSection';
-import { SpiderWebDoodle, RobotDoodle } from '../ui/Doodles';
 
 
 export const ProcessSection = () => {
   return (
-    <section id="process" className="py-24 md:py-32 bg-board-slate relative overflow-hidden">
+    <section id="process" className="py-24 md:py-32 bg-transparent relative overflow-hidden">
       {/* Subtle accent */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[200px] bg-marker-yellow/20 rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="absolute top-[30%] left-[3%] w-24 h-24 text-white/40/10 -rotate-12 pointer-events-none hidden md:block">
-        <RobotDoodle />
-      </div>
-      <div className="absolute bottom-[20%] right-[3%] w-32 h-32 text-chalk-pink/30/10 rotate-12 pointer-events-none hidden md:block">
-        <SpiderWebDoodle />
-      </div>
+      
+      
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <AnimatedSection className="mb-16 md:mb-20 text-center max-w-3xl mx-auto">
           <p className="text-xs tracking-[0.3em] uppercase text-white font-bold/70 mb-4 font-bold">

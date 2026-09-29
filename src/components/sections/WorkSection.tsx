@@ -1,6 +1,5 @@
 import React from 'react';
 import { AnimatedSection } from '../ui/AnimatedSection';
-import { SpiderWebDoodle, NotebookSquiggle, RobotDoodle } from '../ui/Doodles';
 import { Staple } from '../ui/Stationery';
 
 
@@ -8,13 +7,9 @@ const creativeWords = ['WEB', 'DESIGN', 'MOTION', 'AI', 'AUTOMATION', 'GROWTH'];
 
 export const WorkSection = () => {
   return (
-    <section id="work" className="py-24 md:py-32 bg-board-plum relative overflow-hidden">
-      <div className="absolute top-[10%] left-[2%] w-24 h-24 text-chalk-blue/30/10 rotate-12 pointer-events-none hidden md:block">
-        <SpiderWebDoodle />
-      </div>
-      <div className="absolute bottom-[20%] right-[5%] w-32 h-32 text-chalk-green/30/10 -rotate-12 pointer-events-none hidden md:block">
-        <RobotDoodle />
-      </div>
+    <section id="work" className="py-24 md:py-32 bg-transparent relative overflow-hidden">
+      
+      
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <AnimatedSection className="mb-16">
           <p className="text-xs tracking-[0.3em] uppercase text-white font-bold/70 mb-4 font-bold flex items-center gap-3">

@@ -1,18 +1,13 @@
 import React from 'react';
 import { SITE_CONTENT } from '../../data/content';
 import { AnimatedSection } from '../ui/AnimatedSection';
-import { SpidermanMaskDoodle, AIDoodle } from '../ui/Doodles';
 
 
 export const LocalSection = () => {
   return (
-    <section className="py-24 md:py-32 bg-board-plum">
-      <div className="absolute top-[20%] right-[5%] w-32 h-32 text-chalk-green/30/10 rotate-12 pointer-events-none hidden md:block">
-        <SpidermanMaskDoodle />
-      </div>
-      <div className="absolute bottom-[10%] left-[5%] w-20 h-20 text-chalk-pink/30/10 -rotate-12 pointer-events-none hidden md:block">
-        <AIDoodle />
-      </div>
+    <section className="py-24 md:py-32 bg-transparent">
+      
+      
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           <div className="lg:col-span-5">

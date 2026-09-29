@@ -28,7 +28,7 @@ export const InteractiveNeedsSection = () => {
   }, [reducedMotion]);
 
   return (
-    <section className="py-24 md:py-32 bg-board-green relative overflow-hidden">
+    <section className="py-24 md:py-32 bg-transparent relative overflow-hidden">
       {/* Subtle geometric background */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <div
@@ -56,7 +56,7 @@ export const InteractiveNeedsSection = () => {
           {/* Detection Feed */}
           <div className="lg:col-span-7">
             <AnimatedSection delay={100}>
-              <div className="bg-board-slate border border-white/10 rounded-xl overflow-hidden">
+              <div className="bg-transparent border border-white/10 rounded-xl overflow-hidden">
                 {/* Header */}
                 <div className="px-6 py-4 border-b border-white/10 flex items-center justify-between">
                   <div className="flex items-center gap-3">
@@ -112,7 +112,7 @@ export const InteractiveNeedsSection = () => {
                 {metrics.map((metric) => (
                   <div
                     key={metric.label}
-                    className="bg-board-slate border border-white/10 rounded-xl p-6 flex items-center justify-between"
+                    className="bg-transparent border border-white/10 rounded-xl p-6 flex items-center justify-between"
                   >
                     <div>
                       <p className="text-xs tracking-[0.15em] uppercase text-white/70/50 mb-1 font-bold">
@@ -131,7 +131,7 @@ export const InteractiveNeedsSection = () => {
                 ))}
 
                 {/* Alert panel */}
-                <div className="bg-board-slate border border-white/10 rounded-xl p-6">
+                <div className="bg-transparent border border-white/10 rounded-xl p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-2 h-2 rounded-full bg-green-500/60" />
                     <span className="text-xs tracking-[0.15em] uppercase text-white/70/50 font-bold">SYSTEM STATUS</span>

@@ -3,7 +3,6 @@ import { SITE_CONTENT } from '../../data/content';
 import { AnimatedSection } from '../ui/AnimatedSection';
 import { Plus, Minus } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { SpidermanMaskDoodle, ArrowDoodle } from '../ui/Doodles';
 import { Paperclip } from '../ui/Stationery';
 
 
@@ -11,13 +10,9 @@ export const FaqSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-24 md:py-32 bg-board-slate">
-      <div className="absolute top-[5%] right-[5%] w-48 h-48 text-white/40/10 rotate-12 pointer-events-none hidden md:block">
-        <SpidermanMaskDoodle />
-      </div>
-      <div className="absolute bottom-[10%] left-[5%] w-32 h-32 text-chalk-blue/30/10 -rotate-12 pointer-events-none hidden md:block">
-        <ArrowDoodle />
-      </div>
+    <section className="py-24 md:py-32 bg-transparent">
+      
+      
       <div className="max-w-4xl mx-auto px-6 md:px-12 relative z-10">
         <Paperclip className="top-[-25px] left-16 w-14 h-14 -rotate-[15deg] text-white/70/60" />
         <AnimatedSection className="mb-16">

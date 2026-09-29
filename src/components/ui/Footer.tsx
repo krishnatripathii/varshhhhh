@@ -10,7 +10,7 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-board-green border-t border-white/10" role="contentinfo">
+    <footer className="bg-transparent border-t border-white/10 border-t border-white/10" role="contentinfo">
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
           {/* Brand */}
