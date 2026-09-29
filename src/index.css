@@ -11,7 +11,7 @@
   }
   
   body {
-    @apply text-text-soft font-sans;
+    @apply text-white font-sans;
     background: transparent;
   }
 
@@ -51,10 +51,10 @@
     @apply hover:bg-white/[0.12] hover:border-white/30 hover:shadow-glass-hover transition-all duration-500;
   }
   .glass-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-br from-[#fcf4f0] via-[#ffecd2] to-[#fcb69f];
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-white/80 to-white/50;
   }
   .text-glow {
-    text-shadow: 0 0 15px rgba(252, 182, 159, 0.4);
+    text-shadow: 0 0 20px rgba(255,255,255,0.4);
   }
   
   /* Shooting Star Tail */

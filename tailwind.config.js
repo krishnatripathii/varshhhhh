@@ -16,8 +16,8 @@ export default {
         'text-soft': '#fcf4f0',
       },
       fontFamily: {
-        sans: ['Manrope', 'sans-serif'],
-        display: ['Syne', 'sans-serif'],
+        sans: ['Outfit', 'sans-serif'],
+        display: ['Space Grotesk', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.8s ease-out forwards',
